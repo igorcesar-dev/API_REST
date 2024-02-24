@@ -6,7 +6,7 @@ import './src/database';
 
 import express from 'express';
 import homeRoutes from './src/routes/homeRoutes';
-// import userRoutes from './src/routes/userRoutes';
+import userRoutes from './src/routes/userRoutes';
 
 class App { // Definição da classe App;
   // Construtor da classe App;
@@ -27,7 +27,7 @@ class App { // Definição da classe App;
   // Método para configurar rotas;
   routes() {
     this.app.use('/', homeRoutes);
-    // this.app.use('/user/', userRoutes);
+    this.app.use('/users/', userRoutes);
   }
 }
 

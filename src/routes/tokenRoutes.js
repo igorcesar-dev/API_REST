@@ -1,8 +1,8 @@
 import { Router } from 'express';
-import homeController from '../controllers/HomeController';
+import tokenController from '../controllers/TokenController';
 
 const router = new Router(); // Criação de instância de roteador usando construtor 'Router';
 
-router.get('/', homeController.index); // Definição de rota chamando o método index do homeController;
+router.post('/', tokenController.create); // Definição de rota chamando o método create do tokenController;
 
 export default router; // Exportação do roteador;
